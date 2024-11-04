@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6E1F7E3-8A84-4922-9FD2-A6568B4321F3}|RevitPluginDemo\\RevitPluginDemo.csproj|c:\\users\\jiang\\iclouddrive\\cdp\\5_explore, explain, propose\\capstone\\revitplugindemo\\revitplugindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6E1F7E3-8A84-4922-9FD2-A6568B4321F3}|RevitPluginDemo\\RevitPluginDemo.csproj|solutionrelative:revitplugindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6E1F7E3-8A84-4922-9FD2-A6568B4321F3}|RevitPluginDemo\\RevitPluginDemo.csproj|C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\revitplugindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A6E1F7E3-8A84-4922-9FD2-A6568B4321F3}|RevitPluginDemo\\RevitPluginDemo.csproj|solutionrelative:revitplugindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\RevitPluginDemo\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "RevitPluginDemo\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\RevitPluginDemo\\MainWindow.xaml",
+              "RelativeToolTip": "RevitPluginDemo\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-30T04:23:29.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\RevitPluginDemo\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RevitPluginDemo\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\jiang\\iCloudDrive\\CDP\\5_Explore, Explain, Propose\\Capstone\\RevitPluginDemo\\RevitPluginDemo\\MainWindow.xaml.cs",
+              "RelativeToolTip": "RevitPluginDemo\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAGkBAAAAAAAAAAAswKsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:17:06.939Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
