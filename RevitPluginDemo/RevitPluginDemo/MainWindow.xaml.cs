@@ -78,32 +78,7 @@ namespace RevitPluginDemo
             }
         }
 
-        // 通过 HTTP 发送指令到 ChatGPT 后端服务
-        //private async Task<string> SendToChatGPTAsync(string command)
-        //{
-        //using (HttpClient client = new HttpClient())
-        //{
-        //var requestData = new
-        //{
-        //command = command,
-        //prompt = ""
-        //};
-
-        //var content = new StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
-
-        //HttpResponseMessage response = await client.PostAsync("http://localhost:5000/chatgpt", content);
-
-        //if (response.IsSuccessStatusCode)
-        //{
-        // 读取并返回 ChatGPT 的响应
-        //return await response.Content.ReadAsStringAsync();
-        //}
-        //else
-        //{
-        //throw new Exception("Unable to connect to ChatGPT backend service");
-        //}
-        //}
-        //}
+// for testing sync
 
         private async Task<string> SendToChatGPTAsync(string command)
         {
