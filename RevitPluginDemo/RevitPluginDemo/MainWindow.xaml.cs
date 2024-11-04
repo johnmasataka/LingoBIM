@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Autodesk.Revit.DB.Structure;
 
+//20241104_Work on GitHub
+
 namespace RevitPluginDemo
 {
     public partial class MainWindow : Window
@@ -78,8 +80,6 @@ namespace RevitPluginDemo
             }
         }
 
-// for testing sync
-
         private async Task<string> SendToChatGPTAsync(string command)
         {
             // Modify the command to include detailed instructions for ChatGPT
@@ -108,13 +108,6 @@ namespace RevitPluginDemo
             }
         }
 
-        public void CreateRoom()
-        {
-            double levelHeight = 3.0;  // Height of each level in meters, for example
-
-            // Use levelHeight in the method for calculations or conditions
-            Console.WriteLine($"The height of the level is {levelHeight} meters.");
-        }
 
 
         // 处理 ChatGPT 返回的结果，并使用 Revit API 进行建模
@@ -143,7 +136,6 @@ namespace RevitPluginDemo
                 // 提取长度、宽度和材料
                 double length = innerResponse.length;
                 double width = innerResponse.width;
-                double levelHeight = innerResponse.levelHeight;
                 string material = innerResponse.material;
 
                 // 使用 Autodesk.Revit.DB.Document 获取当前文档
@@ -153,7 +145,7 @@ namespace RevitPluginDemo
                 {
                     trans.Start();
 
-                    CreateRoom(length, width, levelHeight); //room length and width
+                    CreateRoom(length, width); //room length and width
 
                     trans.Commit();
                 }
@@ -164,7 +156,7 @@ namespace RevitPluginDemo
             }
         }
 
-        public void CreateRoom(double length, double width, double levelHeight)
+        public void CreateRoom(double length, double width)
         {
             Autodesk.Revit.DB.Document doc = _commandData.Application.ActiveUIDocument.Document;
 
@@ -186,10 +178,10 @@ namespace RevitPluginDemo
             XYZ r3 = p3 + new XYZ(offset, -offset, 0);
 
 
-            walls.Add(CreateWall(doc, roomGlobalPosition, p0, p1, 12)); // Wall1
-            walls.Add(CreateWall(doc, roomGlobalPosition, p1, p2, 12)); // Wall2
-            walls.Add(CreateWall(doc, roomGlobalPosition, p2, p3, 12)); // Wall3
-            walls.Add(CreateWall(doc, roomGlobalPosition, p3, p0, 12)); // Wall4
+            walls.Add(CreateWall(doc, roomGlobalPosition, p0, p1, 102)); // Wall1
+            walls.Add(CreateWall(doc, roomGlobalPosition, p1, p2, 102)); // Wall2
+            walls.Add(CreateWall(doc, roomGlobalPosition, p2, p3, 102)); // Wall3
+            walls.Add(CreateWall(doc, roomGlobalPosition, p3, p0, 102)); // Wall4
 
             List<XYZ> points = new List<XYZ>
             {
@@ -258,14 +250,14 @@ namespace RevitPluginDemo
                 .OfClass(typeof(FloorType));
             FloorType floorType = collector.FirstElement() as FloorType;
 
-            
+
             //level
             FilteredElementCollector collector_floor = new FilteredElementCollector(doc);
             ICollection<Element> collection = collector_floor.OfClass(typeof(Level)).ToElements();
             var level = collection.First();
 
             // Create the floor using the CurveArray
-            Floor.Create(doc, new List<CurveLoop> { profile }, floorTypeId, level.Id); 
+            Floor.Create(doc, new List<CurveLoop> { profile }, floorTypeId, level.Id);
         }
 
         public void CreateRoof(Autodesk.Revit.DB.Document doc, List<XYZ> points, double slope)
@@ -319,7 +311,7 @@ namespace RevitPluginDemo
                 .OfCategory(BuiltInCategory.OST_Windows);
 
             //FamilySymbol windowSymbol = windowCollector.ToList().Where(x => x.Name.Equals("34\" x 36\"")).First() as FamilySymbol;
-            FamilySymbol windowSymbol = windowCollector.ToList().Where(x=>(x.Name.Equals("34\" x 36\"") && ((FamilySymbol)x).Family.Name.Equals("Window-Casement-Double"))).First() as FamilySymbol;
+            FamilySymbol windowSymbol = windowCollector.ToList().Where(x => (x.Name.Equals("34\" x 36\"") && ((FamilySymbol)x).Family.Name.Equals("Window-Casement-Double"))).First() as FamilySymbol;
             //FamilySymbol windowSymbol = windowCollector.ToList()[2] as FamilySymbol;
             //FamilySymbol windowSymbol = windowCollector.FirstElement() as FamilySymbol;
 
@@ -378,7 +370,7 @@ namespace RevitPluginDemo
             }
 
 
-        
+
         }
 
 
@@ -397,7 +389,7 @@ namespace RevitPluginDemo
             var level = collection.First();
 
             XYZ columnPosition = roomPosition + localPosition;
-            FamilyInstance column = doc.Create.NewFamilyInstance(columnPosition, columnType, level,Autodesk.Revit.DB.Structure.StructuralType.Column);
+            FamilyInstance column = doc.Create.NewFamilyInstance(columnPosition, columnType, level, Autodesk.Revit.DB.Structure.StructuralType.Column);
             column.LookupParameter("Height").Set(height);
             column.LookupParameter("Diameter").Set(diameter);
             return column;

@@ -3,6 +3,6 @@
     "",
     "\\RevitPluginDemo"
   ],
-  "SelectedNode": "\\RevitPluginDemo\\MainWindow.xaml",
+  "SelectedNode": "\\RevitPluginDemo\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
