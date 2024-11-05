@@ -85,6 +85,12 @@ C:\Users\jiang\iCloudDrive\CDP\5_Explore, Explain, Propose\Capstone\RevitPluginD
 C:\Users\jiang\iCloudDrive\CDP\5_Explore, Explain, Propose\Capstone\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPlu.EE75357E.Up2Date
 C:\Users\jiang\iCloudDrive\CDP\5_Explore, Explain, Propose\Capstone\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.dll
 C:\Users\jiang\iCloudDrive\CDP\5_Explore, Explain, Propose\Capstone\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.pdb
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.csproj.AssemblyReference.cache
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\MainWindow.baml
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\MainWindow.g.cs
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo_MarkupCompile.cache
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.g.resources
+C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.csproj.CoreCompileInputs.cache
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\RevitPluginDemo.dll
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\RevitPluginDemo.pdb
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\Newtonsoft.Json.dll
@@ -169,12 +175,6 @@ C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Deb
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\ru-RU\AdWindows.resources.dll
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\zh-CN\AdWindows.resources.dll
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\bin\Debug\zh-TW\AdWindows.resources.dll
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.csproj.AssemblyReference.cache
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\MainWindow.baml
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\MainWindow.g.cs
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo_MarkupCompile.cache
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.g.resources
-C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.csproj.CoreCompileInputs.cache
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPlu.EE75357E.Up2Date
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.dll
 C:\Users\jiang\Documents\GitHub\LingoBIM\RevitPluginDemo\RevitPluginDemo\obj\Debug\RevitPluginDemo.pdb

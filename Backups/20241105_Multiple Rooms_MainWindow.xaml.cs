@@ -108,6 +108,8 @@ namespace RevitPluginDemo
             }
         }
 
+
+
         // 处理 ChatGPT 返回的结果，并使用 Revit API 进行建模
         private void ExecuteRevitCommand(string chatGPTResponse)
         {
@@ -197,6 +199,7 @@ namespace RevitPluginDemo
             XYZ r2 = p2 + new XYZ(offset, offset, 0);
             XYZ r3 = p3 + new XYZ(offset, -offset, 0);
 
+
             walls.Add(CreateWall(doc, roomGlobalPosition, p0, p1, 12)); // Wall1
             walls.Add(CreateWall(doc, roomGlobalPosition, p1, p2, 12)); // Wall2
             walls.Add(CreateWall(doc, roomGlobalPosition, p2, p3, 12)); // Wall3
@@ -274,6 +277,37 @@ namespace RevitPluginDemo
                     List<XYZ> floorPoints = new List<XYZ> { p0, p1, p2, p3, p0 };
                     CreateFloor(doc, floorPoints);
 
+                    // Create roof for each room
+                    //List<XYZ> roofPoints = new List<XYZ>
+                    //{
+                    //p0 + new XYZ(-4, -4, 0),
+                    //p1 + new XYZ(-4, 4, 0),
+                    //p2 + new XYZ(4, 4, 0),
+                    //p3 + new XYZ(4, -4, 0),
+                    //p0 + new XYZ(-4, -4, 0)
+                    //};
+                    //CreateRoof(doc, roofPoints, 0.25);
+
+                    //create small but better roofs
+                    //List<XYZ> roof_points = new List<XYZ>
+                    //{
+                    //p0,   
+                    //p1,   
+                    //p2,   
+                    //p3,   
+                    //p0    
+                    //};
+                    //CreateRoof(doc, roof_points, 0.25);
+
+                    // Add windows to one of the exterior walls (e.g., p0-p1 and p2-p3)
+                    //if (j == 0) // Only add windows on one side for exterior walls
+                    //{
+                    //Wall wall1 = CreateWall(doc, new XYZ(0, 0, 0), p0, p1, 12);
+                    //Wall wall3 = CreateWall(doc, new XYZ(0, 0, 0), p2, p3, 12);
+                    //CreateWindow(doc, wall1);
+                    //CreateWindow(doc, wall3);
+                    //}
+
                     CreateDoorAndWindow(doc, walls[0], walls[2]);
 
                     CreateWindow(doc, walls[0], walls[2]);
@@ -290,6 +324,7 @@ namespace RevitPluginDemo
             List<XYZ> roofBoundaryPoints = new List<XYZ> { boundaryP0, boundaryP1, boundaryP2, boundaryP3, boundaryP0 };
             CreateRoof(doc, roofBoundaryPoints, 0.25); // Create one roof for the entire area
         }
+
 
         private Wall CreateWall(Autodesk.Revit.DB.Document doc, XYZ roomPosition, XYZ startPosition, XYZ endPosition, double height)
         {
@@ -384,7 +419,10 @@ namespace RevitPluginDemo
                 .OfClass(typeof(FamilySymbol))
                 .OfCategory(BuiltInCategory.OST_Windows);
 
+            //FamilySymbol windowSymbol = windowCollector.ToList().Where(x => x.Name.Equals("34\" x 36\"")).First() as FamilySymbol;
             FamilySymbol windowSymbol = windowCollector.ToList().Where(x => (x.Name.Equals("34\" x 36\"") && ((FamilySymbol)x).Family.Name.Equals("Window-Casement-Double"))).First() as FamilySymbol;
+            //FamilySymbol windowSymbol = windowCollector.ToList()[2] as FamilySymbol;
+            //FamilySymbol windowSymbol = windowCollector.FirstElement() as FamilySymbol;
 
             // Ensure the door and window symbols are active
             if (!doorSymbol.IsActive)
@@ -440,6 +478,7 @@ namespace RevitPluginDemo
                 }
             }
         }
+
 
         private void CreateDoor(Autodesk.Revit.DB.Document doc, Wall wall1)
         {
@@ -472,7 +511,10 @@ namespace RevitPluginDemo
                 .OfClass(typeof(FamilySymbol))
                 .OfCategory(BuiltInCategory.OST_Windows);
 
+            //FamilySymbol windowSymbol = windowCollector.ToList().Where(x => x.Name.Equals("34\" x 36\"")).First() as FamilySymbol;
             FamilySymbol windowSymbol = windowCollector.ToList().Where(x => (x.Name.Equals("34\" x 36\"") && ((FamilySymbol)x).Family.Name.Equals("Window-Casement-Double"))).First() as FamilySymbol;
+            //FamilySymbol windowSymbol = windowCollector.ToList()[2] as FamilySymbol;
+            //FamilySymbol windowSymbol = windowCollector.FirstElement() as FamilySymbol;
 
             // Ensure the door and window symbols are active
             if (!windowSymbol.IsActive)
@@ -519,6 +561,7 @@ namespace RevitPluginDemo
                 }
             }
         }
+
 
         private FamilyInstance CreateColumn(Autodesk.Revit.DB.Document doc, XYZ roomPosition, XYZ localPosition, double diameter, double height)
         {
@@ -558,5 +601,11 @@ namespace RevitPluginDemo
 
             throw new InvalidOperationException("No column family type found in the document.");
         }
+
+
+
+
+
+
     }
 }

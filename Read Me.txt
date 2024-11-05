@@ -1,0 +1,6 @@
+Change the tool's catalog: 
+1. Copy paste all files. 
+2. If it is an add-in file directly added in Revit (not for this case), go to C:\ProgramData\Autodesk\Revit\Addins\2024 to find the exact add-in file, use Visual Studio Code to open it and change the direction to the new catalog location. 
+2. If it is used in RevitAddinManager, open the RevitAddinManager in Revit and right-click the item you want to use, select "open file location" or related item, redirect the RevitPluginDemo.dll from the new location. 
+Just in case: RevitAddinManager is located in a different location than other add-in files: C:\Users\jiang\AppData\Roaming\Autodesk\Revit\Addins\2024 
+
